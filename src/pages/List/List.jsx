@@ -15,7 +15,7 @@ export default function List({ url }) {
   };
 
   const removeFood = async (id) => {
-    const res = await axios.post(`${url}/api/food/remove`, { id: id });
+    const res = await axios.post(`${url}/api/food/remove`, { id});
     await fetchList();
     if (res.data.success) {
       toast.success(res.data.message);
